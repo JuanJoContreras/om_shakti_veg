@@ -1,0 +1,17 @@
+.InicioSesion {
+    
+    height: 100px;
+    width:  1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.btn {
+    border-radius: 20px;
+    width:15%;
+    align-items: center;
+    margin: 10%;
+    
+  }

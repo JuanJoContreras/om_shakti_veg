@@ -1,0 +1,44 @@
+.App {
+  font-family: "Lato", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: wheat;
+}
+
+a:hover {
+  color: #ffcb08;
+  text-decoration: none;
+}
+
+.active {
+  color: white;
+  text-shadow: 1px 1px 1px white;
+}
+
+.links {
+  column-gap: 2rem;
+}
+
+.links a {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+h1 {
+  text-align: center;    
+  /*overflow: hidden;*/
+  /*white-space: nowrap;*/
+  font-size: 2rem;
+  margin: auto;
+  /*border-right: 0.15em solid #18bdec;*/
+  /*animation: typing 2s steps(38) 1s 1 normal both, blink 1s steps(1) infinite;*/
+  margin-bottom: 10px;
+}
+
+li {
+  list-style: none;
+}
+
