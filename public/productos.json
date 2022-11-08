@@ -1,50 +1,65 @@
-[
+{
+  "photos": [
   {
-    "desc": "Los jamones  VEGUSTA son un producto elaborado en base a proteínas vegetales y condimentos que le dan su característico sabor, en el caso del jamón ahumado este tiene un suave ahumado. Armado y moldeado artesanalmente, para luego ser sometido a un proceso térmico de cocción mediante el se asegura su preservación.",
+    "alt": "Los jamones  VEGUSTA son un producto elaborado en base a proteínas vegetales y condimentos que le dan su característico sabor, en el caso del jamón ahumado este tiene un suave ahumado. Armado y moldeado artesanalmente, para luego ser sometido a un proceso térmico de cocción mediante el se asegura su preservación.",
     "id": "P001",
-    "img": "https://firebasestorage.googleapis.com/v0/b/apis-varias-mias.appspot.com/o/pizzeria%2Fpizza-1239077_640_cl.jpg?alt=media&token=6a9a33da-5c00-49d4-9080-784dcc87ec2c",
+    "src": {
+      "tiny":"https://firebasestorage.googleapis.com/v0/b/apis-varias-mias.appspot.com/o/pizzeria%2Fpizza-1239077_640_cl.jpg?alt=media&token=6a9a33da-5c00-49d4-9080-784dcc87ec2c"
+    },
     "ingredients": ["200g", "10 pack ( 12 láminas por pack )", "12 meses congelado a -18°C"],
     "name": "JAMONADA VEGGIE VEGUSTA",
     "price": 17077
   },
   {
-    "desc": "El Bife VEGUSTA es elaborado con proteínas vegetales de soya y trigo. Condimentado artesanalmente con aromáticos condimentos del sur de Chile, es sometido a un proceso térmico de cocción mediante el cual se asegura su conservabilidad. Para consumir al plato o en sándwich.",
+    "alt": "El Bife VEGUSTA es elaborado con proteínas vegetales de soya y trigo. Condimentado artesanalmente con aromáticos condimentos del sur de Chile, es sometido a un proceso térmico de cocción mediante el cual se asegura su conservabilidad. Para consumir al plato o en sándwich.",
     "id": "P002",
-    "img": "https://firebasestorage.googleapis.com/v0/b/apis-varias-mias.appspot.com/o/pizzeria%2Fcheese-164872_640_com.jpg?alt=media&token=18b2b821-4d0d-43f2-a1c6-8c57bc388fab",
+    "src": {
+      "tiny":"https://firebasestorage.googleapis.com/v0/b/apis-varias-mias.appspot.com/o/pizzeria%2Fcheese-164872_640_com.jpg?alt=media&token=18b2b821-4d0d-43f2-a1c6-8c57bc388fab"
+    },   
     "ingredients": ["265g", "12 packs de 3 unidades", "12 meses congelado a -18°C"],
     "name": "BIFE VEGGIE DE SEITANH VEGUSTA",
     "price": 24347
   },
   {
-    "desc": "Hamburguesa a base de plantas, lista para las parrillas veggie.",
+    "alt": "Hamburguesa a base de plantas, lista para las parrillas veggie.",
     "id": "P003",
-    "img": "https://firebasestorage.googleapis.com/v0/b/apis-varias-mias.appspot.com/o/pizzeria%2Fpizza-1239077_640_com.jpg?alt=media&token=e7cde87a-08d5-4040-ac54-90f6c31eb3e3",
+    "src": {
+      "tiny":"https://firebasestorage.googleapis.com/v0/b/apis-varias-mias.appspot.com/o/pizzeria%2Fpizza-1239077_640_com.jpg?alt=media&token=e7cde87a-08d5-4040-ac54-90f6c31eb3e3"
+    },    
     "ingredients": ["box  500 grs", "8 unidades x caja", "12 meses congelado a -18°C"],
     "name": "HAMBURGUESA VEGETAL NOT BURGER",
     "price": 40474
   },
   {
-    "desc": "Versión a base de plantas de la carne molida, con ingredientes naturales y saludables.",
+    "alt": "Versión a base de plantas de la carne molida, con ingredientes naturales y saludables.",
     "id": "P004",
-    "img": "https://firebasestorage.googleapis.com/v0/b/apis-varias-mias.appspot.com/o/pizzeria%2Fpizza-2000595_640_c.jpg?alt=media&token=61325b6e-a1e0-441e-b3b5-7335ba13e8be",
+    "src": {
+      "tiny":"https://firebasestorage.googleapis.com/v0/b/apis-varias-mias.appspot.com/o/pizzeria%2Fpizza-2000595_640_c.jpg?alt=media&token=61325b6e-a1e0-441e-b3b5-7335ba13e8be"
+    },    
+    "img": "",
     "ingredients": ["400 grs", "12 unidades x caja", "12 meses congelado a -18°C"],
     "name": "NOT MEAT MOLIDA",
     "price": 47116
   },
   {
-    "desc": "A base de plantas.",
+    "alt": "A base de plantas.",
     "id": "P005",
-    "img": "https://firebasestorage.googleapis.com/v0/b/apis-varias-mias.appspot.com/o/pizzeria%2Fpizza-salame.jpg?alt=media&token=ab3d4bf8-01f2-4810-982b-bd7fb6b517b2",
+    "src": {
+      "tiny":"https://firebasestorage.googleapis.com/v0/b/apis-varias-mias.appspot.com/o/pizzeria%2Fpizza-salame.jpg?alt=media&token=ab3d4bf8-01f2-4810-982b-bd7fb6b517b2"
+    },     
     "ingredients": ["400 grs", "12 unidades x caja", "12 meses congelado a -18°C"],
     "name": "PULLED PORK",
     "price": 39568
   },
   {
-    "desc": "Aderezo vegetal tipo mayonesa en base a garbanzo y lupino, envasado en envase doypack",
+    "alt": "Aderezo vegetal tipo mayonesa en base a garbanzo y lupino, envasado en envase doypack",
     "id": "P006",
-    "img": "https://firebasestorage.googleapis.com/v0/b/apis-varias-mias.appspot.com/o/pizzeria%2Fpizza-2000595_640_c.jpg?alt=media&token=61325b6e-a1e0-441e-b3b5-7335ba13e8be",
+    "src": {
+      "tiny":"https://firebasestorage.googleapis.com/v0/b/apis-varias-mias.appspot.com/o/pizzeria%2Fpizza-2000595_640_c.jpg?alt=media&token=61325b6e-a1e0-441e-b3b5-7335ba13e8be"
+    },    
     "ingredients": ["700 GRS", "12 unidades x caja", "12 meses congelado a -18°C"],
     "name": "NOT MAYO ORIGINAL",
     "price": 34296
   }
 ]
+}

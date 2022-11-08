@@ -4,7 +4,7 @@ import Heart from "./Heart";
 
 import  "../assets/css/card.css";
 
-export default function Home() {
+export default function Favoritos() {
 
   const { fotos, setFotos } = useContext(Context);
 
@@ -24,7 +24,10 @@ export default function Home() {
         key={i}    
     >
       <Heart filled={foto.favorito}/>
+      <p>{foto.name}</p>
       <p>{foto.desc}</p>
+      <p>{foto.price}</p>
+      
     </div>
       )) }
     </div>

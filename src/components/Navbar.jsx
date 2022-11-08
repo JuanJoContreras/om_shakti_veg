@@ -1,5 +1,6 @@
 import { Navbar, Container } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
+
 import "../assets/css/Navbar.css";
 
 export default function Navigation() {
@@ -19,7 +20,10 @@ export default function Navigation() {
           <NavLink to="/Market" className="logo-nombre mx-1 mb-0">
           Market
           </NavLink>
-          <Navbar.Brand className="text-white justify-content-end"></Navbar.Brand> 🕉🚀
+          <NavLink to="/favoritos" className="logo-nombre mx-1 mb-0">
+          Favoritos
+          </NavLink>
+          <Navbar.Brand className="text-white justify-content-end">🕉🚀</Navbar.Brand> 
         </Container>
       </Navbar>
     </>

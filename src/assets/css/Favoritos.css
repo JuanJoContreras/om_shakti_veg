@@ -1,6 +1,6 @@
-.card {
+.favoritos {
     display: grid;
-    gap: 5px;   
+    gap: 10px;   
   }
   
   .grid-columns-5 {
@@ -8,12 +8,12 @@
     border-radius: 10px;
     width: 100%;
   }
-
+  
   .grid-columns-4 {
     grid-template-columns: repeat(4, 1fr);
   }
   
-  .card .foto {
+  .favoritos .foto {
     cursor: pointer;
     padding: 10px 10px 0px 10px;
     display: flex;
@@ -28,21 +28,19 @@
     text-shadow: 0px 0px 15px black;
   }
   
-  .card .foto:hover {
+  .favoritos .foto:hover {
     box-shadow: 0px 0px 2px 1px black;
   }
   
-  .card .foto svg {
-    justify-content: space-between;
-    align-items: flex-end;
-    }
-  
-  .p-3 {
-    padding: 20px;
-    color: wheat;
+  .favoritos .foto svg {
+    align-self: flex-end;
   }
   
-  .card img:hover {
+  .p-3 {
+    padding: 30px;
+  }
+  
+  .favoritos img:hover {
     border-radius: 10px;
     width: 100%;
     object-fit: cover;
@@ -51,20 +49,19 @@
     animation: tiembla 0.1s infinite;
   }
 
-  .card img {
+  .favoritos img {
     border-radius: 10px;
     width: 100%;
     object-fit: cover;
-    filter: grayscale(10);
+    /*filter: grayscale(10);*/
     transform: scale(1);
     transition: 0.5s all;
   }
 
   .foto{
     border-radius: 20px;
-    width: 50%;
-    height: 300px;
+    width: 100%;
     align-items: center;
-    margin: 18%;
-    padding: 2%;
+    margin: 5%;
+    padding: 10%;
   }
