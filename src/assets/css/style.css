@@ -42,3 +42,9 @@ li {
   list-style: none;
 }
 
+main {
+  display: grid;
+  grid-template-columns: 1fr repeat(12,minmax(auto, 30px)) 40fr;
+  grid-gap: 2.5rem;
+  padding: 20px;
+}

@@ -7,6 +7,6 @@ export default () => {
     <h1 className="mb-4">Registrate</h1>    
     <hr />
     <Registrate />
-  </Container>
+    </Container>
   )
 }

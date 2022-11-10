@@ -11,6 +11,7 @@ import NotFound from "./views/NotFound";
 import Favoritos from "./views/Market";
 
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import Context from "./Context";
 
 
@@ -30,7 +31,7 @@ export default function App() {
       favorito: false
     }))
     setFotos(dataFiltrada); 
-    console.log(dataFiltrada) 
+    //console.log(dataFiltrada) 
   };
 
   useEffect (() => {
@@ -41,19 +42,19 @@ export default function App() {
     <div className="App">
     <Context.Provider value={{ fotos, setFotos }}>
       <BrowserRouter>      
-      <Navbar />
+       <Navbar />
         <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/InicioSesion" element={<InicioSesion />} />
         <Route path="/Registrate" element={<Registrate />} />
         <Route path="/Market" element={<Market />} />
-        <Route path="/favoritos" element={<Favoritos />} />        
+        <Route path="/Favoritos" element={<Favoritos />} />        
         <Route path="*" element={<NotFound />} />
-        </Routes>        
-      </BrowserRouter>
+        </Routes>    
+        <Footer />
+       </BrowserRouter>
       </Context.Provider>
-      </div>
-  
+    </div>  
   );
 }
 

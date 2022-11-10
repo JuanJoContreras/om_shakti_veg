@@ -1,4 +1,5 @@
 import { useContext } from "react";
+
 import Context from "../Context";
 
 import "../assets/css/Favoritos.css";
@@ -13,7 +14,9 @@ export default function Favoritos() {
     setFotos([...fotos]);
   };
 
-  return (          
+  return (       
+        <div>
+        <h1>Productos Favoritos</h1>   
           <div className="p-3 galeria grid-columns-4">
           {fotos
           .filter((elem) => elem.favorito)
@@ -25,6 +28,7 @@ export default function Favoritos() {
             key={i}
             />
           ))}                
-        </div>   
+        </div> 
+    </div>  
     );
   }

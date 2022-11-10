@@ -6,7 +6,7 @@ import "../assets/css/Navbar.css";
 export default function Navigation() {
   return (
     <>
-      <Navbar className="navbar text-white py-3" >
+      <Navbar className="navbar text-white py-3 " >
         <Container className="container d-block d-flex justify-content-between">          
           <NavLink to="/" className="logo-nombre mx-1 mb-0 d-flex justify-content-start">
           🕉 Om Shakti Veg
@@ -20,7 +20,7 @@ export default function Navigation() {
           <NavLink to="/Market" className="logo-nombre mx-1 mb-0">
           Market
           </NavLink>
-          <NavLink to="/favoritos" className="logo-nombre mx-1 mb-0">
+          <NavLink to="/Favoritos" className="logo-nombre mx-1 mb-0">
           Favoritos
           </NavLink>
           <Navbar.Brand className="text-white justify-content-end">🕉🚀</Navbar.Brand> 
@@ -29,3 +29,4 @@ export default function Navigation() {
     </>
   );
 }
+
