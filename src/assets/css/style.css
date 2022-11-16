@@ -1,50 +1,98 @@
-.App {
-  font-family: "Lato", sans-serif;
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
-a {
-  text-decoration: none;
+
+body {
+  overflow: hidden;
+}
+.background {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
   color: wheat;
 }
-
-a:hover {
-  color: #ffcb08;
-  text-decoration: none;
+.background-home {
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url('https://raw.githubusercontent.com/visnupriyaAmstein/SCL018-burger-queen/main/src/img/imgHome.png');
+  background-size: cover;
+  background-position: bottom;
+  filter: blur(5px);
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  color: wheat;
+  transform: scale(1.1);  
+  font-family: 'Montserrat', sans-serif;
 }
 
-.active {
-  color: white;
-  text-shadow: 1px 1px 1px white;
+.mask {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 20px;
+  padding: 10px 10px 10px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 400px;
+  width: 1200px;
+
 }
 
-.links {
-  column-gap: 2rem;
+.logo {
+  font-size: 50px;
+  color: wheat;
+  font-family: 'Montserrat', sans-serif;
 }
 
-.links a {
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 1.2rem;
+nav {
+  position: absolute;
+  width: 100vw;
 }
 
-h1 {
-  text-align: center;    
-  /*overflow: hidden;*/
-  /*white-space: nowrap;*/
-  font-size: 2rem;
-  margin: auto;
-  /*border-right: 0.15em solid #18bdec;*/
-  /*animation: typing 2s steps(38) 1s 1 normal both, blink 1s steps(1) infinite;*/
-  margin-bottom: 10px;
-}
-
-li {
-  list-style: none;
-}
-
-main {
+#tienda,
+#perfil {
   display: grid;
-  grid-template-columns: 1fr repeat(12,minmax(auto, 30px)) 40fr;
-  grid-gap: 2.5rem;
-  padding: 20px;
+  grid-template-columns: 200px 1fr;
+  color: wheat;
+  font-family: 'Montserrat', sans-serif;
+  
+}
+
+aside {
+  box-shadow: -3px 0px 10px 1px gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px 10px;
+}
+
+aside select {
+  display: flex;
+ 
+}
+
+.publicaciones {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+@media (min-width: 680px) {
+  .publicaciones {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 960px) {
+  .publicaciones {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }

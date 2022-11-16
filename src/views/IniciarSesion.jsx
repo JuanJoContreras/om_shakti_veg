@@ -8,24 +8,31 @@ import { useContext, useState } from "react";
 import ContextOrigin from "../Context";
 const { Context } = ContextOrigin;
 
-export default function Registrarse() {
-  const { setUsers, users } = useContext(Context);
+export default function IniciarSesion() {
+  const { setSession, users } = useContext(Context);
 
   const [user, setUser] = useState({});
 
   const navigate = useNavigate();
   const addUser = () => {
-    setUsers([...users, user]);
-    alert("Usuario Creado con éxito, intente iniciar sesión");
-    navigate("/login");
+    const userExists =
+      users.some((u) => u.email == user.email && u.password == user.password) ||
+      true;
+    if (userExists) {
+      setSession(user);
+      alert("Usuario identificado con éxito");
+      navigate("/tienda");
+    } else {
+      alert("Email o contraseña incorrecta");
+    }
   };
 
   return (
     <div className="bg-light vh-100 pt-5">
-      <Form className="w-50 mx-auto border p-3 rounded bg-success text-white ">
+      <Form className="w-50 mx-auto border p-3 rounded bg-warning ">
         <div>
           <h4>Market Place</h4>
-          <h6>Registrate</h6>
+          <h6>Iniciar sesión</h6>
           <hr />
         </div>
         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
@@ -48,18 +55,9 @@ export default function Registrarse() {
             placeholder="Ingresa tu contraseña..."
           />
         </Form.Group>
-        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-          <Form.Label>Avatar URL</Form.Label>
-          <Form.Control
-            onChange={({ target }) =>
-              setUser({ ...user, ["picture"]: target.value })
-            }
-            type="text"
-          />
-        </Form.Group>
 
-        <Button variant="warning me-3" onClick={addUser}>
-          Registrarme
+        <Button variant="success me-3" onClick={addUser}>
+          Iniciar Sesión
         </Button>
         <Link to="/" className="text-decoration-none text-dark">
           <Button variant="light">Volver</Button>

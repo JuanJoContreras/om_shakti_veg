@@ -28,7 +28,7 @@ const Footer = () => {
                     <li>+56 9 68459636</li>
                     <li>Los Nogales #341</li>
                 </ul>
-                <hr />
+                
                 <h4>Siguenos en RRSS</h4>
                 <ul>
                     <FontAwesomeIcon icon="fa-brands fa-facebook" />

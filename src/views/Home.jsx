@@ -1,15 +1,12 @@
-import Header from "../components/Header";
+import Background from "../components/Background";
+import Navbar from "../components/Navbar";
 
-const Home = () => {
+export default function Home() {
   return (
     <>   
-      <Header />
-      <div className="container my-4">
-        <div className="row row-cols-1 row-cols-md-3 g-4">
-      </div>
-      </div>
-      </>    
+      <Navbar />
+      <Background />      
+    </>    
   );
 };
 
-export default Home;

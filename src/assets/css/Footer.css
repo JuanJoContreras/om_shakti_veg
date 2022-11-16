@@ -33,8 +33,9 @@ a {
     justify-content: space-between;
     align-items: flex-start;
     padding: 2px;
-    background-color: #212225;
+    background-color: rgba(0, 0, 0, 0.6);
     border-radius: 20px;
+    background-size: cover;
    }
 
    .title-footer {
@@ -46,4 +47,16 @@ a {
     align-items: flex-start;
     padding: 20px;
 
+   }
+
+   .mask {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 20px;
+    padding: 10px 10px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 400px;
+    width: 1200px;
    }
