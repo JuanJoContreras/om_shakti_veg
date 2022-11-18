@@ -1,35 +1,39 @@
 import { useContext } from "react";
 import Context from "../Context";
-import Heart from "./Heart";
+import { formatNumber } from "../Helper";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStarOfLife } from "@fortawesome/free-solid-svg-icons";
 
-import  "../assets/css/card.css";
-
-export default function Favoritos() {
-
-  const { fotos, setFotos } = useContext(Context);
+const Card = () => {
+  // const [total, setTotal] = useState(0);
+  const { productos, setProductos } = useContext(Context);
 
   const setFavorito = (id) => {
-      const fotoIndex = fotos.findIndex((f)  => f.id === id);
-      fotos[fotoIndex].favorito = !fotos[fotoIndex].favorito;
-      setFotos([...fotos]);
+    const productoIndex = productos.findIndex((p) => p.id === id);
+    productos[productoIndex].liked = !productos[productoIndex].liked;
+    setProductos([...productos]);
+    console.log(productos);
   };
 
   return (
-    <div className="galeria grid-columns-4 p-3">
-      {fotos.map((foto, i) => (
-    <div
-        onClick={() => setFavorito(foto.id)}
-        className="foto"
-        style={{ backgroundImage: `url(${foto.src})`}}
-        key={i}    
-    >
-      <Heart filled={foto.favorito}/>
-      <p>{foto.name}</p>
-      <p>{foto.desc}</p>
-      <p>{foto.price}</p>
-      
-    </div>
-      )) }
-    </div>
+    <>
+      {productos.map((e) => (
+        <div key={e.id} className="card">
+          <div onClick={() => setFavorito(e.id)} className="favorite">
+            <FontAwesomeIcon icon={faStarOfLife} />
+          </div>
+          <img src={e.img} className="card-img-top" alt="producto" />
+          <div className="card-body">
+            <h5 className="card-title text-center">{e.name}</h5>
+            <hr />
+            <h2 className="text-center text-dark pb-3">
+              ${formatNumber(e.price)}
+            </h2>
+          </div>
+        </div>
+      ))}
+    </>
   );
-}
+};
+
+export default Card;

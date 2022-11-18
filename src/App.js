@@ -1,36 +1,33 @@
 import "./assets/css/style.css";
+import "./assets/css/Reset.css";
+import "./assets/css/Intro.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
-import Home from "./views/Home";
-import IniciarSesion from "./views/IniciarSesion";
-import Registrate from "./views/Registrate";
-import Tienda from "./views/Tienda";
-import Perfil from "./views/Perfil";
-import Detalle from "./views/Detalle";
-import NuevaPublicacion from "./views/NuevaPublicacion";
-
-
+import { useContext } from "react";
 import Context from "./Context";
 
-const { Provider } = Context;
+import Home from "./views/Home";
+import Tienda from "./views/Tienda";
+import Profile from "./views/Perfil";
+import FichaProducto from "./views/FichaProducto";
+import NuevaPublicacion from "./views/NuevaPublicacion";
+import Intro from "./views/Intro";
 
 export default function App() {
+  const { isAuthenticated, PrivateRoute } = useContext(Context);
+
   return (
     <div className="App">
-      <Provider>
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/login" element={<IniciarSesion />} />
-            <Route path="/registro" element={<Registrate />} />
-            <Route path="/perfil" element={<Perfil />} />
-            <Route path="/detalle" element={<Detalle />} />
-            <Route path="/tienda" element={<Tienda />} />
-            <Route path="/publicaciones/nueva" element={<NuevaPublicacion />} />
-            
-          </Routes>
-        </BrowserRouter>
-      </Provider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Intro />} />
+          <Route path="/home" element={ <PrivateRoute auth={{ isAuthenticated }}>
+          <Home /> </PrivateRoute>} />
+          <Route path="/perfil" element={<PrivateRoute auth={{ isAuthenticated }}>
+          <Profile /></PrivateRoute>}/>
+          <Route path="/producto/:id" element={<PrivateRoute auth={{ isAuthenticated }}>
+          <FichaProducto /> </PrivateRoute>}/>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

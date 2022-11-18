@@ -1,0 +1,22 @@
+[
+    {
+      "userId": 1,
+      "correo": "contacto@omshakti.cl",
+      "contraseña": 1234
+    },
+    {
+      "userId": 2,
+      "correo": "juanjose@omshakti.cl",
+      "contraseña": 12345
+    },
+    {
+        "userId": 3,
+        "correo": "finanzas@omshakti.cl",
+        "contraseña": 123456
+      },
+      {
+        "userId": 4,
+        "correo": "desafio@omshakti.cl",
+        "contraseña": 123457
+      }
+  ]

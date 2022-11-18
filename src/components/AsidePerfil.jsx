@@ -1,8 +1,22 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Button from "react-bootstrap/Button";
+
+import { useContext } from "react";
+
+import ContextOrigin from "../Context";
+const { Context } = ContextOrigin;
 
 
 export default function AsidePerfil() {
+  const navigate = useNavigate();
+  const { setSession } = useContext(Context);
+  
+  const logout = () => {
+    setSession(null);
+    alert("Sesión cerrada con éxito");
+    navigate("/");
+  };
+
   return (
     <aside className="bg-primary text-center">
       <div>
@@ -18,6 +32,11 @@ export default function AsidePerfil() {
         <Link to="/tienda">
           <Button variant="info text-white text-decoration-none">Volver a la tienda 🕉</Button>
         </Link>
+      </div>
+      <div>
+        <Button variant="danger" onClick={logout}>
+          Cerrar Sesión
+        </Button>
       </div>
     </aside>
   );

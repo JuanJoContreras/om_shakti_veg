@@ -1,11 +1,36 @@
 import AsidePerfil from "../components/AsidePerfil";
-import Perfil from "../components/Perfil";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import { useContext } from "react";
+import Context from "../Context";
 
-export default function PerfilView() {
+const Profile = () => {
+  const { productos, setProductos } = useContext(Context);
+
+  const deleteFavorito = (id) => {
+    const productosIndex = productos.findIndex((e) => e.id === id);
+    productos[productosIndex].liked = !productos[productosIndex].liked;
+    setProductos([...productos]);
+  };
   return (
-    <div id="perfil" className="bg-light vh-100">
-      <AsidePerfil />
-      <Perfil />
+    <>
+    <Navbar />
+
+    <div className="p-3 galeria grid-columns-5">
+      {productos
+        .filter((elem) => elem.liked)
+        .map((elem, i) => (
+          <img
+            src={elem.img}
+            alt=""
+            onClick={() => deleteFavorito(elem.id)}
+            key={i}
+          />
+        ))}
     </div>
+    <Footer />
+  </>
   );
 }
+
+export default Profile;

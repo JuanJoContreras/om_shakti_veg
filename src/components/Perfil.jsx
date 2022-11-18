@@ -9,6 +9,16 @@ const { Context } = ContextOrigin;
 export default function Registrarse() {
   const { setUsers, users, session } = useContext(Context);
 
+  const { productos, setProductos } = useContext(Context);
+
+  const deleteFavorito = (id) => {
+    const productosIndex = productos.findIndex((e) => e.id === id);
+    productos[productosIndex].liked = !productos[productosIndex].liked;
+    setProductos([...productos]);
+  };
+
+
+
   const [user, setUser] = useState({});
 
   const updateUser = () => {

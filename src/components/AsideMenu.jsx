@@ -5,7 +5,6 @@ import Form from "react-bootstrap/Form";
 import { useContext, useState } from "react";
 
 import ContextOrigin from "../Context";
-
 const { Context } = ContextOrigin;
 
 export default function AsideMenu() {
@@ -26,7 +25,7 @@ export default function AsideMenu() {
         <h1 className="mb-3">🕉</h1>
         <h4>
           <Link to="/perfil" className="text-white text-decoration-none">
-            Mi Perfil
+            Mi Cuenta
           </Link>
         </h4>
       </div>

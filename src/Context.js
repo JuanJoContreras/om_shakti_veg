@@ -1,56 +1,81 @@
 import { createContext, useState, useEffect } from "react";
+import { Navigate } from "react-router-dom";
 
+//Creacion del context
 const Context = createContext(null);
 
-function Provider({ children }) {
-  const [users, setUsers] = useState([]);
-  const [session, setSession] = useState(null);
+// Provider con la fuente de datos
+const Provider = ({ children }) => {  
+  const [productos, setProductos] = useState([]);
+  const [usuarios, setUsuarios] = useState([]);
+  const [Intro, setIntro] = useState(true);
+  const [isAuthenticated, setisAuthenticated] = useState(false);
+  const [productoDetail, setProductoDetail] = useState({});
+  const [rating, setRating] = useState(0);
+  const [hover, setHover] = useState(0);
 
-  const [publicaciones, setPublicaciones] = useState([
-    {
-      title: "NOT MAYO ORIGINAL",
-      user: "Dea",
-      description: "Aderezo vegetal tipo mayonesa en base a garbanzo y lupino, envasado en envase doypack",
-      price: 34296,
-      img: "https://i.imgur.com/ZSI9d8h.jpg[/img"
-    }
-  ]);
-   
-  const [fotos, setFotos] = useState([]);
-
-  const endpoint = "/productos.json";
-  const getFotosNaturales = async () => {
-    const res = await fetch(endpoint);
-    let data = await res.json();
-    let dataFiltrada = data.photos.map((elem) => ({
-      id: elem.id,
-      name:elem.name,
-      src: elem.src.tiny,
-      desc: elem.alt,
-      price: elem.price,
-      favorito: false
-    }))
-    
-    setFotos(dataFiltrada); 
-    //console.log(dataFiltrada) 
+     
+  const getProductos = async () => {
+    const res = await fetch("/productos.json");
+    const data = await res.json();
+    setProductos(data);
   };
 
-  useEffect (() => {
-    getFotosNaturales();
+  const getUsuarios = async () => {
+    const res = await fetch("/usuarios.json");
+    let data = await res.json();
+    setUsuarios(data);
+  };
+
+  useEffect(() => {
+    getProductos();
+    getUsuarios();
   }, []);
 
-
-  const state = {
-    users,
-    setUsers,
-    session,
-    setSession,
-    publicaciones,
-    setPublicaciones,
-    fotos,
-    setFotos
+  const changeForm = (bool) => {
+    setIntro(bool);
   };
-  return <Context.Provider value={state}>{children}</Context.Provider>;
-}
 
-export default { Provider, Context };
+  const PrivateRoute = ({ auth: { isAuthenticated }, children }) => {
+    return isAuthenticated ? children : <Navigate to="/" />;
+  };
+
+  const setFavorito = (id) => {
+    const productoIndex = productos.findIndex((p) => p.id === id);
+    productos[productoIndex].liked = !productos[productoIndex].liked;
+    setProductos([...productos]);
+    //console.log(productos);
+  };
+
+  return (
+    <Context.Provider
+      value={{
+        productos,
+        setProductos,
+        usuarios,
+        setUsuarios,
+        Intro,
+        setIntro,
+        isAuthenticated,
+        setisAuthenticated,
+        changeForm,
+        PrivateRoute,
+        setFavorito,
+        productoDetail,
+        setProductoDetail,
+        rating,
+        setRating,
+        hover,
+        setHover
+      }}
+    >
+      {children}
+    </Context.Provider>
+  );
+};
+
+// Export del provider
+export { Provider };
+
+// Export del context
+export default Context;
