@@ -9,7 +9,7 @@ body {
   --ash-black: #222;
   --white: #fafafa;
   --sky: #00ccff;
-  --green: #22dddd;
+  --bluelight: #22dddd;
   --blue: #1300ff;
   --dusk: #6600ff;
   --purple: #9900ff;
@@ -18,6 +18,7 @@ body {
   --orange: #fd7702;
   --yellow: #ffbb00;
   --corp: #212529;
+  --green: #379634;
 
   --background: var(--yellow);
   --accent: var(--white);
@@ -112,7 +113,7 @@ p {
 nav {
   position: absolute;
   width: 100vw;
-}
+}*/
 
 #tienda,
 #perfil {
@@ -151,7 +152,7 @@ aside select {
   .publicaciones {
     grid-template-columns: repeat(4, 1fr);
   }
-}*/
+}
 
 
 
@@ -249,15 +250,15 @@ section {
   position: relative;
 }
 
-img {
+/*img {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   width: 100%;
-  height: 100%;
-}
+  height: 90%;
+}*/
 
 .progress {
   position: fixed;

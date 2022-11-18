@@ -1,6 +1,6 @@
 import "../assets/css/Home.css";
 import Navbar from "../components/Navbar";
-import Masonry from "../components/Slider";
+import Slider from "../components/Slider";
 import CardCategory from "../components/CardCategory";
 import Footer from "../components/Footer";
 import AsideMenu from "../components/AsideMenu";
@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      
+      <Slider />
       <section className="grilla-productos">
         <div className="categoria-img-carrusel">
           <div className="categoria-img">

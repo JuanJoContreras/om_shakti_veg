@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRobot } from "@fortawesome/free-solid-svg-icons";
 
@@ -30,12 +30,7 @@ export default function Footer() {
         </div>
         <div className="corporacional-container">
           <div className="info-corp">
-            <div className="logo-footer">
-              <Link to="/home" className="nav-link">
-              🕉 Om Shakti Veg
-              </Link>
-            </div>
-            <div className="preguntas-corp">
+              <div className="preguntas-corp">
               <h3>🕉 Om Shakti Veg </h3> 
               <hr className="hrdiv" />             
               <ul>
@@ -44,7 +39,7 @@ export default function Footer() {
                 <li>abastecer al comercio en todo Chile.</li>
                 <li><span className="fw-bold">Email:</span>contacto@omshakti.cl</li>
                 <li><span className="fw-bold">Telefono:</span>+56966879999</li>
-                <li>Servicio técnico</li>
+                
               </ul>
             </div>
             <div className="atencion-corp">

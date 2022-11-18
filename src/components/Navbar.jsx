@@ -14,7 +14,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="navbar d-flex sticky-top navbar-expand-lg navbar-dark bg-dark navp">
+      <nav className="navbar d-flex sticky-top navbar-expand-lg navbar-dark bg-secondary navp">
         <Link to="/home" className="nav-link">
         🕉 Om Shakti Veg 
         </Link>

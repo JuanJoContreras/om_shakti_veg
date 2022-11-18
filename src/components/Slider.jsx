@@ -59,7 +59,7 @@ export default function Slider() {
   };
   return (
     <>
-      <div className="masonry">
+      
         <div className="slider">
           <div
             id="carouselExampleCaptions"
@@ -136,24 +136,8 @@ export default function Slider() {
               <span className="visually-hidden">Next</span>
             </button>
           </div>
-        </div>
-        <div className="calugas">
-          <div className="calugaUno">
-            <img
-              className="d-block w-100 slider-img"
-              src="https://r.btcdn.co/r/eyJzaG9wX2lkIjoyOTIsImciOiI2MzB4In0/6be41f4db0be622/665906-banner_parlantes.jpg"
-              alt="First slide"
-            />
-          </div>
-          <div className="calugaDos">
-            <img
-              className="d-block w-100 slider-img"
-              src="https://r.btcdn.co/r/eyJzaG9wX2lkIjoyOTIsImciOiI2MzB4In0/6be41f4db0be622/665906-banner_parlantes.jpg"
-              alt="First slide"
-            />
-          </div>
-        </div>
-      </div>
+        </div>   
+      
     </>
   );
 }

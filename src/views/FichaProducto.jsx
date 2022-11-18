@@ -1,6 +1,7 @@
 import { useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
 import Context from "../Context";
+import { formatNumber } from "../Helper";
 import StarRating from "../components/StarRating";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -31,9 +32,9 @@ const FichaProducto = () => {
               alt={productoDetail.name}
             />
           </div>
-          <div class="ficha-description">
-            <h2>DESCRIPCIÓN DEL PRODUCTO</h2>
-            <p className="">{productoDetail.description}</p>
+          <div className="ficha-description">
+            <h2 className="text-center text-white pb-3"><span className="fw-bold">DESCRIPCIÓN DEL PRODUCTO</span></h2>
+            <p className="text-center text-white pb-4">{productoDetail.description}</p>
           </div>
           <div class="ficha-tecnica">
             {/* <ul>
@@ -48,8 +49,8 @@ const FichaProducto = () => {
           </div>
           <div class="ficha-video">
             <iframe
-              width="100%"
-              height="480"
+              width="40%"
+              height="200"
               src={`https://www.youtube.com/embed/${productoDetail.video}`}
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -60,14 +61,15 @@ const FichaProducto = () => {
         </div>
         <div className="">
           <div className="">
-            <h2 className="">{productoDetail.name}</h2>
+            <h2 className="text-center text-white pb-3">{productoDetail.name}</h2>
           </div>
           <div className="">
-            <h5 className="">{productoDetail.marca}</h5>
+            <h5 className="text-center text-white pb-3">{productoDetail.marca}</h5>
           </div>
           <StarRating />
+          <hr className="hrdiv" />
           <div className="">
-            <h4>${productoDetail.price}</h4>
+            <h4 className="text-center text-white pb-3">${formatNumber(productoDetail.price)}</h4>
           </div>
           <div className="">
             <button className="btn btn-danger">Añadir</button>
