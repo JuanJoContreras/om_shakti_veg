@@ -33,18 +33,18 @@ export default function Navbar() {
              id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <Link to="/tornamesas" className="nav-link">
-                <h4>Congelados</h4>
+              <Link to="/Desayunos" className="nav-link">
+                <h4>Desayunos</h4>
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/parlantes" className="nav-link">
-                <h4>Frutos Secos</h4>
+              <Link to="/Almuerzos" className="nav-link">
+                <h4>Almuerzos</h4>
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/parlantes" className="nav-link">
-                <h4>Novedades Food Tech</h4>
+              <Link to="/Extras" className="nav-link">
+                <h4>Extras</h4>
               </Link>
             </li>
           </ul>

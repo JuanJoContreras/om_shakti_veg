@@ -1,5 +1,6 @@
 import { useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
+import { formatNumber } from "../Helper";
 import Context from "../Context";
 
 import StarRating from "../components/StarRating";
@@ -47,17 +48,7 @@ const FichaProducto = () => {
                   )}
                 </ul> */}
           </div>
-          <div class="ficha-video">
-            <iframe
-              width="40%"
-              height="200"
-              src={`https://www.youtube.com/embed/${productoDetail.video}`}
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              title="Embedded youtube"
-            />
-          </div>
+          
         </div>
         <div className="">
           <div className="">
@@ -69,7 +60,7 @@ const FichaProducto = () => {
           <StarRating />
           <hr className="hrdiv" />
           <div className="">
-            <h4 className="text-center text-white pb-3">${productoDetail.price}</h4>
+            <h4 className="text-center text-white pb-3">${formatNumber(productoDetail.price)}</h4>
           </div>
           <div className="">
             <button className="btn btn-danger">Añadir</button>

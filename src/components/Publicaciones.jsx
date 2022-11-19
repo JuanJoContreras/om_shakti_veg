@@ -13,7 +13,7 @@ export default function Publicaciones() {
 
   return (
     <div className="p-4">
-      <div className="d-flex align-items-center px-2 mb-3">
+      <div className="nombre-p d-flex align-items-center px-2 mb-3">
         Nombre:
         <input
           type="text"
@@ -23,7 +23,7 @@ export default function Publicaciones() {
         />
       </div>
 
-      <div className="publicaciones">
+      <div className="publicaciones ">
         {publicacionesFiltradas.map((p, i) => {
           return <Publicacion publicacion={p} key={i} />;
         })}

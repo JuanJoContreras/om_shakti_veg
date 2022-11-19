@@ -148,9 +148,53 @@ nav {
 .publicaciones {
   display: flex;
   justify-content: center; 
-  width: 60%; 
+  align-items: center; 
+  width: 100%; 
+  margin: 3rem auto; 
+  color: var(--orange);  
+  border-radius: 10px;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  justify-content: space-around;
+  padding: 0.5rem;
+
+}
+
+
+.publicaciones-container {
+  display: flex;
+  justify-content: center; 
+  width: 50%; 
+  margin: 5rem auto;   
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.publicacion-container button{
+  display: flex;
+  justify-content: center; 
+  width: 30%; 
+  align-items: center;
   margin: 1rem auto; 
-  color: #000000;
+}
+
+.publicacion-container Card.Body {
+  display: flex;
+  justify-content: center; 
+  width: 30%; 
+  align-items: center;
+  margin: 1rem auto; 
+  justify-content: space-around;
+  padding: 0.5rem;
+
+}
+
+.publicacion h4 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 20px;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
 }
 
 @media (min-width: 680px) {
@@ -186,6 +230,10 @@ nav {
   margin: 2rem auto; 
   box-shadow: 0px 0px 2px 1px black;
   border-radius: 10px;
+  object-fit: cover;
+  filter: grayscale(3);
+  transform: scale(0.95);
+  animation: tiembla 0.1s infinite;
   cursor: pointer;
 }
 

@@ -2,7 +2,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { useContext } from "react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Context from "../Context";
 
 import Form from "react-bootstrap/Form";
@@ -52,11 +52,18 @@ const Profile = () => {
     </div>
     </div>
     <hr className="hrdiv" />
+    
     <div className="publicaciones-container">
-    <Link to="/publicaciones/nueva">
-    <h1>Publicaciones</h1>
+    <ul className="navbar-nav navbar-nav  d-flex flex-row justify-content-between nav-gap">
+    <li className="nav-item">
+    <Link to="/publicaciones/nueva" className="publicacion justify-content-end">
+    <h4>Publicaciones</h4>
     </Link>
+    </li>
+    </ul>
     </div>
+    
+    
 
     </>
     

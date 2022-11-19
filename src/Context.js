@@ -20,7 +20,15 @@ const Provider = ({ children }) => {
       description: "Almuerzos",
       price: 30000,
       img: "https://i.imgur.com/x3TV25I.jpg"
-    }
+    },
+    {
+      title: "Dhal de Arvejas",
+      user: "Vishnu",
+      description: "Almuerzos",
+      price: 20000,
+      img: "https://i.imgur.com/D00EJVA.jpg"
+    },
+    
   ]);
 
      
