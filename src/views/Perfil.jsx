@@ -1,22 +1,44 @@
-import AsidePerfil from "../components/AsidePerfil";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { useContext } from "react";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import Context from "../Context";
+
+import Form from "react-bootstrap/Form";
 
 const Profile = () => {
   const { productos, setProductos } = useContext(Context);
+  const [filtro, setFiltro] = useState("");
 
   const deleteFavorito = (id) => {
     const productosIndex = productos.findIndex((e) => e.id === id);
+    productos.splice(productosIndex,1);
     productos[productosIndex].liked = !productos[productosIndex].liked;
     setProductos([...productos]);
   };
+
   return (
     <>
     <Navbar />
-
-    <div className="p-3 galeria grid-columns-5">
+    <section className="aside p-3 galeria grid-columns-4 text-center">
+      <div>
+        <h2>Ordenar Por:</h2>
+        <hr className="hrdiv" />
+        <Form.Select
+          value={filtro}
+          onChange={({ target }) => setFiltro(target.value)}
+        >
+          <option value="price_desc">Precio mayor a menor</option>
+          <option value="price_asc">Precio menor a mayor</option>
+          <option value="alphabetical">Orden alfabético</option>
+        </Form.Select>
+      </div>
+      </section>
+    <div className="favoritos-container">
+    <h1>Productos favoritos</h1>
+    <hr className="hrdiv" />
+    <div className="favoritos p-3 galeria grid-columns-4">
       {productos
         .filter((elem) => elem.liked)
         .map((elem, i) => (
@@ -25,11 +47,19 @@ const Profile = () => {
             alt=""
             onClick={() => deleteFavorito(elem.id)}
             key={i}
-          />
+          />          
         ))}
     </div>
-    <Footer />
-  </>
+    </div>
+    <hr className="hrdiv" />
+    <div className="publicaciones-container">
+    <Link to="/publicaciones/nueva">
+    <h1>Publicaciones</h1>
+    </Link>
+    </div>
+
+    </>
+    
   );
 }
 

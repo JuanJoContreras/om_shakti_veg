@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import Publicacion from "./Publicacion";
-import ContextOrigin from "../Context";
-const { Context } = ContextOrigin;
+
+import Context from "../Context";
 
 export default function Publicaciones() {
   const { publicaciones } = useContext(Context);

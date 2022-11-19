@@ -26,6 +26,8 @@ export default function App() {
           <Profile /></PrivateRoute>}/>
           <Route path="/producto/:id" element={<PrivateRoute auth={{ isAuthenticated }}>
           <FichaProducto /> </PrivateRoute>}/>
+          <Route path="/publicaciones/nueva" element={<PrivateRoute auth={{ isAuthenticated }}>
+          <NuevaPublicacion /> </PrivateRoute>}/>
         </Routes>
       </BrowserRouter>
     </div>

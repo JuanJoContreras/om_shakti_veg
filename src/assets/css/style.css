@@ -113,33 +113,44 @@ p {
 nav {
   position: absolute;
   width: 100vw;
-}*/
+}
 
 #tienda,
 #perfil {
   display: grid;
   grid-template-columns: 200px 1fr;
-  color: wheat;
+  color:black;
   font-family: 'Montserrat', sans-serif;
   
-}
+}*/
 
-aside {
-  box-shadow: -3px 0px 10px 1px gray;
+.aside {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 30px 10px;
+  justify-content: center; 
+  width: 30%; 
+  margin: 2rem auto;   
+  border-radius: 10px;
+  cursor: pointer;
 }
 
-aside select {
+.aside h2 {
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 9px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.aside select {
   display: flex;
  
 }
 
 .publicaciones {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  display: flex;
+  justify-content: center; 
+  width: 60%; 
+  margin: 1rem auto; 
+  color: #000000;
 }
 
 @media (min-width: 680px) {
@@ -154,7 +165,40 @@ aside select {
   }
 }
 
+/*.welcome h1 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 5px;
+  margin: 2rem auto; 
+  justify-content: space-around;
+  padding: 0.5rem 0;
+  font-family: 'Montserrat', sans-serif;
 
+
+}*/
+
+.favoritos img {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center; 
+  width: 20%; 
+  height: 200px;
+  margin: 2rem auto; 
+  box-shadow: 0px 0px 2px 1px black;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.favoritos-container h1 {
+  
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 5px;
+  margin: 0 auto;
+  justify-content: space-around;
+  padding: 1rem 0;
+  font-family: 'Montserrat', sans-serif;
+}
 
 footer {
   position: fixed;

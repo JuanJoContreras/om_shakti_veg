@@ -1,12 +1,11 @@
 import { useContext } from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
+
 import Context from "../Context";
 
 export default function Publicacion({
   publicacion: { title, description, img, price, user }
-
-  
 
 }) {
   return (

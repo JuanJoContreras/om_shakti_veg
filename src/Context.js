@@ -13,6 +13,15 @@ const Provider = ({ children }) => {
   const [productoDetail, setProductoDetail] = useState({});
   const [rating, setRating] = useState(0);
   const [hover, setHover] = useState(0);
+  const [publicaciones, setPublicaciones] = useState([
+    {
+      title: "Khatte Lehsuni",
+      user: "Raj",
+      description: "Almuerzos",
+      price: 30000,
+      img: "https://i.imgur.com/x3TV25I.jpg"
+    }
+  ]);
 
      
   const getProductos = async () => {
@@ -66,7 +75,9 @@ const Provider = ({ children }) => {
         rating,
         setRating,
         hover,
-        setHover
+        setHover,
+        publicaciones,
+        setPublicaciones
       }}
     >
       {children}

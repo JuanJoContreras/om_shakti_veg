@@ -1,8 +1,14 @@
+import Navbar from "../components/Navbar";
+import Publicaciones from "../components/Publicaciones";
+import Footer from "../components/Footer";
+
 export default function NuevaPublicacion() {
     return (
       <>
-        <h1></h1>
-      </>
+       <Navbar />
+        <Publicaciones /> 
+        <Footer  />  
+      </> 
     );
   }
   

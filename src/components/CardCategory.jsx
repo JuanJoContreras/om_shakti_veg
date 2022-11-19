@@ -9,6 +9,7 @@ import Slider from "react-slick";
 const CardCategory = ({ category }) => {
   // const [total, setTotal] = useState(0);
   const { productos, setFavorito } = useContext(Context);
+  
   const navigate = useNavigate();
   var settings = {
     dots: false,

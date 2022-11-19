@@ -3,18 +3,39 @@ import Navbar from "../components/Navbar";
 import Slider from "../components/Slider";
 import CardCategory from "../components/CardCategory";
 import Footer from "../components/Footer";
-import AsideMenu from "../components/AsideMenu";
+
+import Context from "../Context";
+
+import Form from "react-bootstrap/Form";
+
+import { useState } from "react";
 
 export default function Home() {
+  const [filtro, setFiltro] = useState("");
+
   return (
     <>
-      <Navbar />
+      <Navbar />      
       <Slider />
+      <section className="aside p-3 galeria grid-columns-4 text-center">
+      <div>
+        <h2>Ordenar Por:</h2>
+        <hr className="hrdiv" />
+        <Form.Select
+          value={filtro}
+          onChange={({ target }) => setFiltro(target.value)}
+        >
+          <option value="price_desc">Precio mayor a menor</option>
+          <option value="price_asc">Precio menor a mayor</option>
+          <option value="alphabetical">Orden alfabético</option>
+        </Form.Select>
+      </div>
+      </section>
       <section className="grilla-productos">
         <div className="categoria-img-carrusel">
           <div className="categoria-img">
             <img
-              src="https://r.btcdn.co/r/eyJzaG9wX2lkIjoyOTIsImciOiI2NTB4In0/9c4efa18d8da6ca/746352-Banner_3_%C2%B7_650_x_230_pp_(1300_%C3%97_730%C2%A0px)_(1300_%C3%97_460%C2%A0px)_(1300_%C3%97_460%C2%A0px)(2).png"
+              src="https://i.imgur.com/MEYiJAO.jpg"
               alt=""
             />
           </div>
@@ -26,7 +47,7 @@ export default function Home() {
         <div className="categoria-img-carrusel">
           <div className="categoria-img">
             <img
-              src="https://r.btcdn.co/r/eyJzaG9wX2lkIjoyOTIsImciOiI2MzB4In0/6be41f4db0be622/665906-banner_parlantes.jpg"
+              src="https://i.imgur.com/f0mwVPg.jpg"
               alt=""
             />
           </div>
@@ -38,7 +59,7 @@ export default function Home() {
         <div className="categoria-img-carrusel">
           <div className="categoria-img">
             <img
-              src="https://r.btcdn.co/r/eyJzaG9wX2lkIjoyOTIsImciOiI4MjB4In0/1b30176cc1665b2/665883-Banner_Aud%C3%ADfonos.jpg"
+              src="https://i.imgur.com/gppoEK1.jpg"
               alt=""
             />
           </div>
