@@ -21,6 +21,10 @@ const Profile = () => {
   return (
     <>
     <Navbar />
+    <div className="perfil p-3 galeria grid-columns-4 text-center ">
+    <h1>Namaste 🙏 a la experiencia personalizada de Om Shakti Veg</h1>
+    <hr className="hrdiv" />
+    </div>
     <section className="aside p-3 galeria grid-columns-4 text-center">
       <div>
         <h2>Ordenar Por:</h2>

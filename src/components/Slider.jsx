@@ -92,22 +92,22 @@ export default function Slider() {
               <div className="carousel-item active">
                 {img3()}
                 <div className="carousel-caption d-md-block">
-                  <h5>Congelados</h5>
-                  <p>Productos Disponibles</p>
+                  <h5>Desayunos</h5>
+                  <p>Servicios Personalizados</p>
                 </div>
               </div>
               <div className="carousel-item">
                 {img2()}
                 <div className="carousel-caption d-md-block">
-                  <h5>Frutos Secos</h5>
-                  <p>Productos Disponibles</p>
+                  <h5>Almuerzos</h5>
+                  <p>Servicios Personalizados</p>
                 </div>
               </div>
               <div className="carousel-item">
                 {img1()}
                 <div className="carousel-caption d-md-block">
-                  <h5>Novedades TechFood</h5>
-                  <p>Productos Disponibles</p>
+                  <h5>Extras</h5>
+                  <p>Servicios Personalizados</p>
                 </div>
               </div>
             </div>

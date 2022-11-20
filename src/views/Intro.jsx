@@ -14,7 +14,7 @@ export default function Intro() {
       <h1 className="mb-3">
         Bienvenido a <span className="fw-bold">Om Shakti</span> 🕉🚀
       </h1>
-      <h3> MarketPlace de Productos Veganos! <hr className="hrdiv" /></h3>
+      <h3> MarketPlace de Productos y Servicios Alimenticios de Oriente! <hr className="hrdiv" /></h3>
       </section>
         
         <section className="formulario">
