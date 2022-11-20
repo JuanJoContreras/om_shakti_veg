@@ -60,7 +60,7 @@ const FichaProducto = () => {
           <StarRating />
           <hr className="hrdiv" />
           <div className="">
-            <h4 className="text-center text-white pb-3">${formatNumber(productoDetail.price)}</h4>
+            <h4 className="text-center text-white pb-3">${productoDetail.price}</h4>
           </div>
           <div className="">
             <button className="btn btn-danger">Añadir</button>

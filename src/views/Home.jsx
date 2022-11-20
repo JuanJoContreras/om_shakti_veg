@@ -4,23 +4,21 @@ import Slider from "../components/Slider";
 import CardCategory from "../components/CardCategory";
 import Footer from "../components/Footer";
 
-import Context from "../Context";
-
 import Form from "react-bootstrap/Form";
 
 import { useState } from "react";
+
+
 
 export default function Home() {
   const [filtro, setFiltro] = useState("");
 
   return (
     <>
-      <Navbar />      
-      <Slider />
+      <Navbar />
       <section className="aside p-3 galeria grid-columns-4 text-center">
       <div>
         <h2>Ordenar Por:</h2>
-        <hr className="hrdiv" />
         <Form.Select
           value={filtro}
           onChange={({ target }) => setFiltro(target.value)}
@@ -31,6 +29,7 @@ export default function Home() {
         </Form.Select>
       </div>
       </section>
+      <Slider />
       <section className="grilla-productos">
         <div className="categoria-img-carrusel">
           <div className="categoria-img">

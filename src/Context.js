@@ -17,7 +17,7 @@ const Provider = ({ children }) => {
     {
       title: "Khatte Lehsuni",
       user: "Raj",
-      description: "Almuerzos",
+      description: "Ricas Hamburguesas a base de garbanzos e ingredientes naturales, rica en proteínas.",
       price: 30000,
       img: "https://i.imgur.com/x3TV25I.jpg"
     },
