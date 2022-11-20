@@ -60,6 +60,11 @@ const Profile = () => {
     <h4>Publicaciones</h4>
     </Link>
     </li>
+    <li className="nav-item">
+    <Link to="/publicacion" className="publicacion justify-content-end">
+    <h4>Publicacion Nueva</h4>
+    </Link>
+    </li>
     </ul>
     </div>
     

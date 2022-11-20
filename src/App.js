@@ -11,6 +11,11 @@ import Profile from "./views/Perfil";
 import FichaProducto from "./views/FichaProducto";
 import NuevaPublicacion from "./views/NuevaPublicacion";
 import Intro from "./views/Intro";
+import Desayunos from "./views/Desayunos";
+import Almuerzos from "./views/Almuerzos";
+import Extras from "./views/Extras";
+import Publicacion from "./views/Publicacion";
+
 
 export default function App() {
   const { isAuthenticated, PrivateRoute } = useContext(Context);
@@ -28,7 +33,15 @@ export default function App() {
           <FichaProducto /> </PrivateRoute>}/>
           <Route path="/publicaciones/nueva" element={<PrivateRoute auth={{ isAuthenticated }}>
           <NuevaPublicacion /> </PrivateRoute>}/>
-        </Routes>
+          <Route path="/publicacion" element={<PrivateRoute auth={{ isAuthenticated }}>
+          <Publicacion /> </PrivateRoute>}/>
+          <Route path="/desayunos" element={<PrivateRoute auth={{ isAuthenticated }}>
+          <Desayunos /> </PrivateRoute>}/>
+          <Route path="/almuerzos" element={<PrivateRoute auth={{ isAuthenticated }}>
+          <Almuerzos /> </PrivateRoute>}/>
+          <Route path="/extras" element={<PrivateRoute auth={{ isAuthenticated }}>
+          <Extras /> </PrivateRoute>}/>
+          </Routes>
       </BrowserRouter>
     </div>
   );

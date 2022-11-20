@@ -1,6 +1,5 @@
-import "../assets/css/Home.css";
 import Navbar from "../components/Navbar";
-import Slider from "../components/Slider";
+
 import CardCategory from "../components/CardCategory";
 import Footer from "../components/Footer";
 
@@ -17,7 +16,7 @@ export default function Home() {
     <>
       <Navbar />
       
-      <Slider />
+     
       <section className="aside p-3 galeria grid-columns-4 text-center">
       <div>
         <h2>Ordenar Por:</h2>
@@ -32,38 +31,22 @@ export default function Home() {
       </div>
       </section>
       <section className="grilla-productos">
-        <div className="categoria-img-carrusel">        
-          <div className="categoria-img">
-          <h2>DESAYUNOS</h2>
-            <hr className="hrdiv" />
-            
-          </div>
-          <div className="categoria-carrusel">
-            <CardCategory category={1} />
-          </div>
-        </div>
+      <h2>ALMUERZOS</h2>
+      <hr className="hrdiv" />       
 
         <div className="categoria-img-carrusel">
           <div className="categoria-img">
-          <h2>ALMUERZOS</h2>
-            <hr className="hrdiv" />
-            
+            <img
+              src="https://i.imgur.com/f0mwVPg.jpg"
+              alt=""
+            />
           </div>
           <div className="categoria-carrusel">
             <CardCategory category={2} />
           </div>
         </div>
 
-        <div className="categoria-img-carrusel">
-          <div className="categoria-img">
-            <h2>EXTRAS</h2>
-            <hr className="hrdiv" />
-            
-          </div>
-          <div className="categoria-carrusel">
-            <CardCategory category={3} />
-          </div>
-        </div>
+        
       </section>
       <Footer />
     </>
