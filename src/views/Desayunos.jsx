@@ -1,13 +1,9 @@
 import Navbar from "../components/Navbar";
-
 import CardCategory from "../components/CardCategory";
 import Footer from "../components/Footer";
-
 import Form from "react-bootstrap/Form";
 
 import { useState } from "react";
-
-
 
 export default function Home() {
   const [filtro, setFiltro] = useState("");

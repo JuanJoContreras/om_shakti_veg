@@ -1,19 +1,16 @@
+import { useState,useEffect } from "react";
 import Navbar from "../components/Navbar";
-
 import CardCategory from "../components/CardCategory";
 import Footer from "../components/Footer";
-
 import Form from "react-bootstrap/Form";
-
-import { useState } from "react";
 
 export default function Home() {
     const [filtro, setFiltro] = useState("");
+    
   
     return (
       <>
-        <Navbar />    
-        
+        <Navbar />            
         <section className="aside p-3 galeria grid-columns-4 text-center">
         <div>
           <h2>Ordenar Por:</h2>
@@ -21,8 +18,6 @@ export default function Home() {
             value={filtro}
             onChange={({ target }) => setFiltro(target.value)}
           >
-            <option value="price_desc">Precio mayor a menor</option>
-            <option value="price_asc">Precio menor a mayor</option>
             <option value="alphabetical">Orden alfabético</option>
           </Form.Select>
         </div>

@@ -13,6 +13,8 @@ const Provider = ({ children }) => {
   const [productoDetail, setProductoDetail] = useState({});
   const [rating, setRating] = useState(0);
   const [hover, setHover] = useState(0);
+  const [datos, setDatos] = useState([]);  
+  const [busqueda, setBusqueda] = useState(''); 
   const [publicaciones, setPublicaciones] = useState([
     {
       title: "Khatte Lehsuni",
@@ -27,8 +29,7 @@ const Provider = ({ children }) => {
       description: "Almuerzos",
       price: 20000,
       img: "https://i.imgur.com/D00EJVA.jpg"
-    },
-    
+    },    
   ]);
 
      
@@ -44,9 +45,20 @@ const Provider = ({ children }) => {
     setUsuarios(data);
   };
 
+  const consultarInformacion = async () => {
+    const res = await fetch("/productos.json");
+    const data = await res.json();
+      //const {data} = await res.json(); 
+       // Formatea a json
+      // Lo que contiene el endpoint esta dentro de data
+setDatos(data); 
+};
+
+
   useEffect(() => {
     getProductos();
     getUsuarios();
+    consultarInformacion();
   }, []);
 
   const changeForm = (bool) => {
@@ -85,7 +97,11 @@ const Provider = ({ children }) => {
         hover,
         setHover,
         publicaciones,
-        setPublicaciones
+        setPublicaciones,
+        datos, 
+        setDatos,
+        busqueda, 
+        setBusqueda
       }}
     >
       {children}
